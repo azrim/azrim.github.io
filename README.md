@@ -2,19 +2,24 @@
 
 Personal homepage / dev portfolio for **Mirza Moulfi Ghozali** (`@azrim`).
 
+## Stack
+
+- Static only: `index.html`, `styles.css`, `script.js`. No build step.
+- Self-hosted variable fonts (Space Grotesk, JetBrains Mono) in `fonts/`.
+- Real data: stats and project blurbs come from the GitHub API snapshot at build time.
+
 ## Hosting
 
 - Repo: [`azrim/azrim.github.io`](https://github.com/azrim/azrim.github.io)
-- GitHub Pages (user site) → custom domain `azrim.my.id`
-- Static only: `index.html`, `styles.css`, `script.js`, `CNAME`
+- GitHub Pages (user site) with custom domain `azrim.my.id` via `CNAME`
 
 ## Local preview
 
-Open `index.html` in a browser, or:
-
 ```bash
-python3 -m http.server 8080
+python -m http.server 8080
 ```
+
+Then open <http://localhost:8080>.
 
 ## DNS (Cloudflare)
 
@@ -28,4 +33,4 @@ Keep email MX as-is. For the site:
 | A | `@` | `185.199.111.153` | DNS only |
 | CNAME | `www` | `azrim.github.io` | DNS only |
 
-After DNS propagates, GitHub Pages custom domain + HTTPS should go green.
+After DNS propagates, enable the custom domain + HTTPS in the repo's Pages settings.
