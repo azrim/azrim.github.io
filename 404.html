@@ -1,101 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>404 — Not Found &middot; azrim.my.id</title>
-  <meta name="robots" content="noindex" />
-  <meta name="theme-color" content="#f4f8fe" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#070f1c" media="(prefers-color-scheme: dark)" />
-  <link rel="icon" type="image/jpeg" href="assets/avatar.jpg" />
-  <link rel="stylesheet" href="styles.css" />
-
-  <script>
-    (function () {
-      try {
-        var theme = localStorage.getItem('azrim-theme');
-        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (theme === 'dark' || (!theme && prefersDark)) {
-          document.documentElement.classList.add('dark');
-        }
-      } catch (e) {}
-    })();
-  </script>
-
-  <style>
-    .notfound-wrap {
-      min-height: calc(100vh - 4.25rem);
-      margin-top: 4.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 3rem 1.5rem;
-      position: relative;
-    }
-    .notfound-card {
-      max-width: 520px;
-      padding: 3rem 2rem;
-      border-radius: 2rem;
-      border: 1px solid var(--line);
-      background: var(--surface);
-      box-shadow: 0 30px 60px -20px var(--shadow);
-      position: relative;
-      z-index: 10;
-    }
-    .notfound-code {
-      font-family: var(--font-mono);
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-    .notfound-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 2.75rem);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      color: var(--ink);
-      line-height: 1.1;
-      margin-bottom: 1rem;
-    }
-    .notfound-desc {
-      font-size: 1rem;
-      color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 2rem;
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>404, page not found at azrim.my.id</title>
+<meta name="robots" content="noindex" />
+<meta name="description" content="That page is not here. Everything lives on the front page." />
+<link rel="icon" href="data:," />
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
+<header class="site-head">
+  <div class="container head-row">
+    <a class="wordmark" href="/" aria-label="azrim, back to the front page">azrim<span class="wordmark-dot">.</span></a>
+  </div>
+</header>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="wordmark" href="/">
-        <span class="wordmark-logo">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2L3 21h4.5l2.25-5.5h8.5L20.5 21H25L16 2zM10.8 13L14 5.2l3.2 7.8z" />
-          </svg>
-        </span>
-        <span>azrim<span style="color: var(--accent);">.</span></span>
-      </a>
-      <a class="btn-pill" href="/">Return Home</a>
-    </div>
-  </header>
-
-  <main class="notfound-wrap">
-    <div class="cloud anim-drift" style="left: 10%; top: 25%; width: 22rem; height: 6rem;" aria-hidden="true"></div>
-    <div class="cloud anim-drift-slow" style="right: 8%; bottom: 20%; width: 20rem; height: 7rem;" aria-hidden="true"></div>
-
-    <div class="notfound-card spotlight">
-      <p class="notfound-code">// 404 &middot; Not Found</p>
-      <h1 class="notfound-title">Nothing lives here.</h1>
-      <p class="notfound-desc">The page you were looking for moved or never existed. Everything from projects to tools lives on the main page.</p>
-      <a class="btn-pill btn-pill-lg" href="/">Back to azrim.my.id &rarr;</a>
-    </div>
-  </main>
+<main class="notfound">
+  <div class="container">
+    <p class="notfound-code">404</p>
+    <h1>That page is not here.</h1>
+    <p class="notfound-row"><a class="key key-primary" href="/">Back to azrim.my.id</a></p>
+  </div>
+</main>
 </body>
 </html>
